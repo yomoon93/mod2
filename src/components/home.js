@@ -2,12 +2,12 @@ import React from 'react'
 import '../App.css'
 import Api from './api'
 
-function Home() {
+function Home(props) {
     return(
         <div>
-            <h1 className="App">Home</h1>
-            <Api />
-            <div>Hello</div>
+            <h1 className="App">Welcome to MoonDoc Homes</h1>
+            <Api setData ={props.setData}  handleCity = {props.handleCity} city={props.city}/>
+            <div></div>
         </div>
 
 
