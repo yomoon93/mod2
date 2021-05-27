@@ -1,10 +1,11 @@
 import React from 'react'
 
-class Crime extends React.Component {
-    constructor(){
-        super()
+class Weather extends React.Component {
+    constructor(props){
+        super(props)
         this.state={
             data:[]
+            
         }
 
 
@@ -21,8 +22,8 @@ class Crime extends React.Component {
     .then(response => {
         console.log(response);
         this.setState({
-            data:[response.list[0].weather[0]]
-    
+            data:[response.list[0]],
+         
         })
         console.log("hey")
         console.log(this.props.city)
@@ -37,19 +38,26 @@ class Crime extends React.Component {
 
 
 render(){
-    console.log(this.props.city)
+    console.log(this.state.dataW)
     return(
-
+            
         <div>
+           <h1 id="weather">Weather</h1>
           {this.state.data.map((dataSet,key)=>{
               return(
-                  <li key={key}>
-                      {dataSet.description}
+                  <li id="listOne" key={key}>
+                      <div className="wContainer">
 
-
+                        <h2> Temperture:{Math.round((dataSet.main.temp-273.15) * (9/5) + 32)}</h2>
+                        <br/>
+                        <h2>Humidity:{dataSet.main.humidity}</h2>
+                        <br/>
+                        <h2> Description:{dataSet.weather[0].description}</h2>
+                      </div>
                   </li>
               )
           })}
+          
 
     
 {/* {this.state.dataSet.map((data,key)=>{
@@ -81,4 +89,4 @@ render(){
             
     }
 }
-export default Crime
+export default Weather

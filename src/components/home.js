@@ -4,8 +4,8 @@ import Api from './api'
 
 function Home(props) {
     return(
-        <div>
-            <h1 className="App">Welcome to MoonDoc Homes</h1>
+        <div classname="container">
+            <h1 className="title">Welcome to MoonDoc Homes</h1>
             <Api setData ={props.setData}  handleCity = {props.handleCity} city={props.city}/>
             <div></div>
         </div>

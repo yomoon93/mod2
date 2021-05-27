@@ -14,8 +14,8 @@ import {GoogleMap, withScriptjs, withGoogleMap,Marker} from 'react-google-maps';
     {props.data.map(value =>(
         <Marker key={value.props.zpid}
                 position ={{
-                    lat:value.latitude,
-                    lng:value.longitude
+                    lat:40.7181,
+                    lng:-73.8448
                 }}
         />
     ))}

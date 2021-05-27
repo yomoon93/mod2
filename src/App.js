@@ -2,10 +2,12 @@ import './App.css';
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
 import Home from './components/home';
 
-import Contact from './components/contact'
+import Saved from './components/saved'
 import Navbar from './components/navbar';
-import Crime from './components/crime';
+import {ReactComponent as Logo} from './img/logo.svg'
 import React, {useState, useEffect} from 'react';
+import Weather from './components/weather';
+
 
 
 
@@ -23,15 +25,18 @@ const [city,setCity] = useState('')
     <Router>
 
   <div className="App">
+    
     <Navbar />
+        
       <Switch>
         <Route path="/" exact >
          <Home  setData ={setData} handleCity = {handleCity} city={city}/>
         </Route>
-        <Route path="/map"> 
-          <Crime  data={data} city={city} />
+        <Route path="/weather"> 
+          <Weather  data={data} city={city} />
+          {/* <Map zpid={this.zpid}/> */}
         </Route>
-        <Route path="/contact" component={Contact}/>
+        <Route path="/saved" component={Saved}/>
       </Switch>
   </div>
   </Router>

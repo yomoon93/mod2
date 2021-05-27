@@ -1,0 +1,98 @@
+.box{
+    list-style: none;
+    border: brown 2px solid;
+    width:450px;
+    box-shadow: 10px 5px 5px rosybrown ;
+    position: relative;    
+}
+
+#photo{
+    border: red 2px solid;
+    display: flex;
+    align-items:flex-start;
+    height: 350px;
+    width: 450px;
+    
+}
+
+.container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header  header header"
+    "search search . photo"
+    "footer footer footer";
+    
+}
+#contain {
+    
+   padding: 20px;
+}
+
+#label{
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+input{
+    width:200px;
+    height:35px
+}
+#btn{
+    width:100px;
+    height:40px;
+    background-color:pink;
+    color:white;
+    font-weight:25px;
+    position: right;
+    
+}
+#btn:hover{
+    
+    background-color:blueviolet;
+    
+
+}
+#btnb {
+    
+    position: relative;
+    left: 250px;
+    width:100px;
+    height: 20px;
+    background-color: crimson;
+}
+#btnb:hover {
+    
+    position: relative;
+    
+    background-color: Pink;
+}
+.wContainer{
+   
+    width:300px;
+    box-shadow: 10px 5px 5px rosybrown ;
+    list-style: none;
+}
+#listOne{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+#weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btnS{
+   
+   
+    width:100px;
+    height: 20px;
+    background-color: crimson;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}

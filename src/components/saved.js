@@ -2,14 +2,14 @@ import React from 'react'
 import '../App.css'
 
 
-function Contact() {
+function Saved() {
     return (
         <div>
-            <h1 className="App">Contact</h1>
+            <h1 className="App">Saved Houses</h1>
             <div>
                 
             </div>
         </div>
     )
 }
-export default Contact
+export default Saved

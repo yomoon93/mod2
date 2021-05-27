@@ -12,15 +12,15 @@ export const SidebarData = [
     cName: 'nav-text'
     },
     {
-    title:'Contact',
-    link:'/contact',
-    icon: <AiIcons.AiFillContacts/>,
+    title:'Weather',
+    link:'/weather',
+    icon: <FcIcons.FcAbout/>,
     cName: 'nav-text'
     },
     {
-    title:'Map',
-    link:'/map',
-    icon: <FcIcons.FcAbout/>,
+    title:'Saved',
+    link:'/saved',
+    icon: <AiIcons.AiFillContacts/>,
     cName: 'nav-text'
     },
 ]

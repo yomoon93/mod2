@@ -1,7 +1,7 @@
 import React from 'react'
-import Crime from './crime';
+import Weather from './weather';
 import { Map } from './map';
-
+import '../App.css'
 
         class Api extends React.Component {
                 constructor(props){
@@ -12,7 +12,8 @@ import { Map } from './map';
                         lat:[],
                         lng:[],
                         images:[],
-                        dataSet:[]
+                        dataSet:[],
+                      
                     }
                     this.handleChange = this.handleChange.bind(this)
                     this.property = this.property.bind(this)
@@ -55,29 +56,37 @@ import { Map } from './map';
                 .then(random => {
                     //setTimeout(random,2000)
                     // console.log(random);
-                   let dataSet = this.state.dataSet.slice().map((result)=> {
+                   let dataSet = this.state.dataSet.map((result)=> {
                         if(zpid == result.zpid){
+                            // i can pick the photo from the array to change the photo that gets rendered take of the array
+                            // if the property doesnt exist it will create it for us in the array
                             result.url = random.images[0]
+                            
+                            if(result.show){
+                                result.show = false
+                            }else {result.show = true}
                         }
                         return result
                     })
 
+
+
                     this.setState({
                         dataSet:dataSet})
-                    //  for(let i = 0; i< random.images.length; i++){
+                    /*  for(let i = 0; i< random.images.length; i++){
                          
-                    //    console.log(random.images[i]);
-                    // }
+                        console.log(random.images[i]);
+                    */
                     console.log(random.images[0])
-                     //let output = `<h5>List of Recent Screenshots</h5>`
-                    // random.forEach(function(images){
-                    //     output +=
-                    //     <ul>
-                    //         <li></li>
-                    //         <li></li>
-                    //         <li></li>
-                    //     </ul>
-                   
+                     /* let output = `<h5>List of Recent Screenshots</h5>`
+                     random.forEach(function(images){
+                       output +=
+                        <ul>
+                            <li></li>
+                           <li></li>
+                            <li></li>
+                       </ul>
+                   */
                 })
                 .catch(err => {
                     console.error(err);
@@ -86,38 +95,6 @@ import { Map } from './map';
 
 
 
-            //     handleImage2= ()=> {
-            //         console.log(this.state.zpid)
-            //     fetch("https://zillow-com1.p.rapidapi.com/images?zpid="+ this.state.zpid, {
-            //         "method": "GET",
-            //         "headers": {
-            //             "x-rapidapi-key": "397afdd1a1msh57cc8dbedc5788ap119f99jsn44718aac973d",
-            //             "x-rapidapi-host": "zillow-com1.p.rapidapi.com"
-            //         }
-            //     })
-            //     .then(response => response.json())
-            //     .then(random => {
-            //         //setTimeout(random,2000)
-            //         console.log(random);
-            //         this.setState({images:random.images})
-            //          for(let i = 0; i< random.images.length; i++){
-            //            console.log(random.images[i]);
-            //         }
-            //         console.log(random.images.length)
-            //          //let output = `<h5>List of Recent Screenshots</h5>`
-            //         // random.forEach(function(images){
-            //         //     output +=
-            //         //     <ul>
-            //         //         <li></li>
-            //         //         <li></li>
-            //         //         <li></li>
-            //         //     </ul>
-                   
-            //     })
-            //     .catch(err => {
-            //         console.error(err);
-            //     });
-            // }
 
 
     getData = () => {
@@ -163,11 +140,18 @@ import { Map } from './map';
 
 }
 
-handleChange(event){
-   let n = event.target.name
-   let value = event.target.value
-   this.setState({[n]:value})
-}
+        handleSave(event){
+            let x = event.target.name
+        }
+
+
+
+
+            handleChange(event){
+            let n = event.target.name
+            let value = event.target.value
+            this.setState({[n]:value})
+            }
 
            handleClick =(event)=>{
                 event.preventDefault()
@@ -175,6 +159,10 @@ handleChange(event){
                 // setTimeout(this.property,1200)
                
              
+            }
+            // toggle for the button with the photos
+            toggle = () =>{
+                this.setState({show:!this.state.show})
             }
 
 
@@ -184,39 +172,39 @@ handleChange(event){
             render(){
                 console.log(this.state.city)
                 return(
-                    <div>
-                        <Crime city={this.state.city}/>
-                        <form onSubmit={this.handleClick}>
-                       <label>
-                        <input id="search" placeholder="Search Bar" name="city" value={this.state.city} onChange={this.handleChange}></input> 
+                    <div id="contain">
+                       
+                        <form id="label" onSubmit={this.handleClick}>
+                       <label >
+                        <input id="search" placeholder="Search Bar" name="city" value={this.state.city} onChange={this.handleChange}></input>
+                       <button id="btn" type="submit">Search</button>
+                        <br/> 
                        </label>
-                       <button type="submit">Search</button>
+                       <br/>
                         </form>
 
                         {this.state.dataSet.map((data,key)=>{
                             return(
                                 <div key={key} >
-                                <li >
+                                <li  className="box">
 
 
-                               Address: {data.address}
+                             <div>   Address: {data.address}    </div>  
                                     <br/>
-                                Price: {data.price}
+                               <div>   Price: {data.price}    </div> 
                                     <br/>
-                                Bedrooms: {data.bedrooms}
+                               <div>    Bedrooms: {data.bedrooms}   </div> 
                                     <br/>
-                                Bathrooms: {data.bathrooms}
+                               <div>     Bathrooms: {data.bathrooms}  </div> 
                                     <br/>
-                                PropertyType: {data.propertyType}
-                                    <br/>
-                                Longitude: {data.longitude}
-                                    <br/>
-                                Latitude:  {data.latitude}
-                                <br/>
-                                zpid: {data.zpid}
+                               <div>  PropertyType: {data.propertyType}     </div> 
+                               <button id="btnS">Save</button>
+                               <button id="btnb"  onClick={(e)=>this.handleImage(e,data.zpid)}>Show Image</button>
+                             
                                 </li> 
-                                <button onClick={(e)=>this.handleImage(e,data.zpid)}>Show Image</button>
-                               {data.url ?  <img alt="pix" src={data.url}/> : ''}
+                               {data.url && data.show  ?   <img id="photo" onClick={data.url} alt="pix" src={data.url}/> : ''}
+                                {/* <button   onClick={(e)=>this.handleImage(e,data.zpid)}>Show Image</button>
+                               {data.url && data.show  ?   <img id="photo" onClick={data.url} alt="pix" src={data.url}/> : ''} */}
                                 
                                 </div>
 
