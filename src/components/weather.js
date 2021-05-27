@@ -38,7 +38,7 @@ class Weather extends React.Component {
 
 
 render(){
-    console.log(this.state.dataW)
+   let location = this.props.city
     return(
             
         <div>
@@ -47,7 +47,9 @@ render(){
               return(
                   <li id="listOne" key={key}>
                       <div className="wContainer">
-
+                        
+                          <h2>{location.toUpperCase()}</h2>
+                         <h2>Date:  {dataSet.dt_txt}</h2> 
                         <h2> Temperture:{Math.round((dataSet.main.temp-273.15) * (9/5) + 32)}</h2>
                         <br/>
                         <h2>Humidity:{dataSet.main.humidity}</h2>

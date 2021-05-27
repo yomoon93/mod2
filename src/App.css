@@ -2,17 +2,18 @@
     list-style: none;
     border: brown 2px solid;
     width:450px;
-    box-shadow: 10px 5px 5px rosybrown ;
-    position: relative;    
+    box-shadow: 20px 5px 5px rosybrown ;
+    position: relative;
+    left: 680px;
 }
 
 #photo{
     border: red 2px solid;
-    display: flex;
-    align-items:flex-start;
+   
     height: 350px;
     width: 450px;
-    
+    position: relative;
+    left: 680px;
 }
 
 .container {
@@ -74,6 +75,7 @@ input{
     width:300px;
     box-shadow: 10px 5px 5px rosybrown ;
     list-style: none;
+    border: rosybrown 2px solid;
 }
 #listOne{
     list-style: none;
