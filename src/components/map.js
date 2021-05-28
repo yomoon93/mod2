@@ -11,15 +11,7 @@ import {GoogleMap, withScriptjs, withGoogleMap,Marker} from 'react-google-maps';
     defaultZoom={10}
     defaultCenter={{lat:40.7095 , lng:-73.8565 }}
     >
-    {props.data.map(value =>(
-        <Marker key={value.props.zpid}
-                position ={{
-                    lat:40.7181,
-                    lng:-73.8448
-                }}
-        />
-    ))}
-    
+
     </GoogleMap>
     );
 }

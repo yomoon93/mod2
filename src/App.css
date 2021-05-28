@@ -77,7 +77,7 @@ input{
     box-shadow: 10px 5px 5px rosybrown ;
     list-style: none;
     border: rosybrown 2px solid;
-    background-color: aqua;
+    background-color: blueviolet;
    
 }
 #listOne{
@@ -106,6 +106,27 @@ input{
 }
 
 .weatherI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#aboutOne{
+    margin-top: 50px;
+
+}
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
+.contactH{
     display: flex;
     justify-content: center;
     align-items: center;

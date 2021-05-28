@@ -3,9 +3,11 @@ import React from 'react'
 const Contact = ()=>{
     
     return(
-        <div>
-            
-            <h1>Contact</h1>
+        <div> 
+            <h1 className="contactH">Contact</h1>
+            <div className="contact">
+
+           
             Email: kevmunar16@hotmail.com
             <br/>
             github: Yomoon93
@@ -13,6 +15,7 @@ const Contact = ()=>{
             Linkedin: linkedin.com/in/kevinmunar
             <br/>
             twitter:YoMunar
+            </div>
         </div>
     )
 }
