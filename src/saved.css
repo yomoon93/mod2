@@ -1,0 +1,18 @@
+.Saved {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    border:2px blue solid;
+    gap:50px 23px;
+   
+}
+
+.container {
+    border: 2px red solid;
+    box-shadow: 20px 5px 5px rosybrown;
+}
+
+#savedPhoto{
+    height:200px;
+    width:300px;
+}

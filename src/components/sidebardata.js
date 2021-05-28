@@ -23,4 +23,16 @@ export const SidebarData = [
     icon: <AiIcons.AiFillContacts/>,
     cName: 'nav-text'
     },
+    {
+    title:'Contact',
+    link:'/contact',
+    icon: <AiIcons.AiFillContacts/>,
+    cName: 'nav-text'
+    },
+    {
+    title:'About',
+    link:'/about',
+    icon: <AiIcons.AiFillContacts/>,
+    cName: 'nav-text'
+    },
 ]

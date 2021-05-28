@@ -71,16 +71,18 @@ input{
     background-color: Pink;
 }
 .wContainer{
-   
-    width:300px;
+    
+    height: 500px;
+    width:400px;
     box-shadow: 10px 5px 5px rosybrown ;
     list-style: none;
     border: rosybrown 2px solid;
+    background-color: aqua;
+   
 }
 #listOne{
     list-style: none;
-    display: flex;
-    justify-content: center;
+   
 }
 #weather{
     display: flex;
@@ -97,4 +99,14 @@ input{
 .title{
     display: flex;
     justify-content: center;
+}
+#icon1 {
+    height:200px;
+    width:100px;
+}
+
+.weatherI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

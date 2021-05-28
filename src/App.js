@@ -7,6 +7,8 @@ import Navbar from './components/navbar';
 import {ReactComponent as Logo} from './img/logo.svg'
 import React, {useState, useEffect} from 'react';
 import Weather from './components/weather';
+import Contact from './components/contact'
+import About from './components/about';
 
 
 
@@ -14,9 +16,10 @@ import Weather from './components/weather';
 
 
 function App(){
+const[save,setSave] =useState([])
 const [data, setData] = useState([])
 const [city,setCity] = useState('')
-  const handleCity = (newCity) =>{
+const handleCity = (newCity) =>{
     console.log('we made it here')
     setCity(newCity)
   }
@@ -30,13 +33,19 @@ const [city,setCity] = useState('')
         
       <Switch>
         <Route path="/" exact >
-         <Home  setData ={setData} handleCity = {handleCity} city={city}/>
+         <Home  setData ={setData} handleCity = {handleCity} city={city} setSave ={setSave} save={save}/>
         </Route>
         <Route path="/weather"> 
           <Weather  data={data} city={city} />
-          {/* <Map zpid={this.zpid}/> */}
+         
         </Route>
-        <Route path="/saved" component={Saved}/>
+        <Route path="/saved">
+          <Saved  save={save} />
+          
+          </Route>  
+        <Route path="/contact" component = {Contact}/>
+        <Route path="/about" component = {About} />
+
       </Switch>
   </div>
   </Router>

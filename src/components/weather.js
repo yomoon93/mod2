@@ -44,47 +44,29 @@ render(){
         <div>
            <h1 id="weather">Weather</h1>
           {this.state.data.map((dataSet,key)=>{
+              const img = dataSet.weather[0].icon
               return(
+                  <div className="wContainer">
                   <li id="listOne" key={key}>
-                      <div className="wContainer">
+                     
                         
                           <h2>{location.toUpperCase()}</h2>
+                          <br/>
+                          <img className="iconI" src={"http://openweathermap.org/img/w/"+dataSet.weather[0].icon+'.png'} />
+                          <br/>
                          <h2>Date:  {dataSet.dt_txt}</h2> 
+                         <br/>
                         <h2> Temperture:{Math.round((dataSet.main.temp-273.15) * (9/5) + 32)}</h2>
                         <br/>
+                        
                         <h2>Humidity:{dataSet.main.humidity}</h2>
                         <br/>
                         <h2> Description:{dataSet.weather[0].description}</h2>
-                      </div>
-                  </li>
+                
+                  </li>      
+                  </div>
               )
           })}
-          
-
-    
-{/* {this.state.dataSet.map((data,key)=>{
-    return(
-        <li key={key} >
-
-         Address: {data.address}
-           <br/>
-         Price: {data.price}
-           <br/>
-        Bedrooms: {data.bedrooms}
-          <br/>
-        Bathrooms: {data.bathrooms}
-                  <br/>
-        PropertyType: {data.propertyType}
-                  <br/>
-        Longitude: {data.longitude}
-                  <br/>
-         Latitude:  {data.latitude}
-
-                </li>
-
-
-)
-})} */}
                         
 </div>
             )      

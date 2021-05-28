@@ -1,6 +1,6 @@
 import React from 'react'
 import Weather from './weather';
-import { Map } from './map';
+
 import '../App.css'
 
         class Api extends React.Component {
@@ -77,7 +77,7 @@ import '../App.css'
                          
                         console.log(random.images[i]);
                     */
-                    console.log(random.images[0])
+                    // console.log(random.images[0])
                      /* let output = `<h5>List of Recent Screenshots</h5>`
                      random.forEach(function(images){
                        output +=
@@ -99,10 +99,11 @@ import '../App.css'
 
     getData = () => {
         // event.preventDefault()
-          this.props.handleCity(document.getElementById("search").value.toString())
-        console.log(this.state.city)
+          this.props.handleCity(this.state.city)
+        //   (document.getElementById("search").value.toString())
+        // console.log(this.state.city)
         
-        fetch("https://zillow-com1.p.rapidapi.com/propertyExtendedSearch?location="+ this.props.city +"&home_type=Houses", {
+        fetch("https://zillow-com1.p.rapidapi.com/propertyExtendedSearch?location="+ this.state.city +"&home_type=Houses", {
             "method": "GET",
             "headers": {
                 "x-rapidapi-key": "397afdd1a1msh57cc8dbedc5788ap119f99jsn44718aac973d",
@@ -111,11 +112,11 @@ import '../App.css'
         })
         .then(response => response.json())
         .then(random => {
-            console.log(random);
+            // console.log(random);
             // console.log(random.props[0]['zpid'])
             let copy =[]
             for(let i = 0; i < random.props.length; i++){
-                console.log(random.props[i]['zpid'])
+                // console.log(random.props[i]['zpid'])
                 copy.push(random.props[i]['zpid'])
             }
            this.property()
@@ -124,7 +125,7 @@ import '../App.css'
             zpid:copy,
             dataSet:random.props 
         },()=>{
-            console.log(this.state.zpid)
+            // console.log(this.state.zpid)
         })
 
 
@@ -140,9 +141,9 @@ import '../App.css'
 
 }
 
-        handleSave(event){
-            let x = event.target.name
-        }
+        // handleSave(event){
+        //     let x = event.target.name
+        // }
 
 
 
@@ -161,9 +162,9 @@ import '../App.css'
              
             }
             // toggle for the button with the photos
-            toggle = () =>{
-                this.setState({show:!this.state.show})
-            }
+            // toggle = () =>{
+            //     this.setState({show:!this.state.show})
+            // }
 
 
 
@@ -198,7 +199,7 @@ import '../App.css'
                                <div>     Bathrooms: {data.bathrooms}  </div> 
                                     <br/>
                                <div>  PropertyType: {data.propertyType}     </div> 
-                               <button id="btnS">Save</button>
+                               <button id="btnS" onClick ={()=>this.props.setSave([...this.props.save, data])} >Save</button>
                                <button id="btnb"  onClick={(e)=>this.handleImage(e,data.zpid)}>Show Image</button>
                              
                                 </li> 
@@ -212,16 +213,7 @@ import '../App.css'
 
                             )
                         })}
-                            {/* {this.state.images.map((images,key)=>{
-                            return(
-                                <li key={key} >
-                                     <img src={images}></img>
-                                </li>
-
-
-                            )
-                        })}
-                       */}
+                        
                     
                     </div>
 
