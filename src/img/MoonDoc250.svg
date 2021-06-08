@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="100" viewBox="0 0 140 100">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 166.667px;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #e9dc07;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: "Merengue Script";
+      }
+
+      .cls-2 {
+        font-size: 250px;
+        fill: #efd916;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #000;
+        stroke-width: 0.067px;
+        fill-rule: evenodd;
+      }
+
+      .cls-4 {
+        fill: #c0b508;
+      }
+    </style>
+  </defs>
+  <text id="MoonDoc" class="cls-1" transform="translate(40.067 61.825) scale(0.067)">MoonDoc</text>
+  <text id="M" class="cls-2" transform="translate(56.467 33.279) scale(0.067)">M</text>
+  <image id="twinkle" x="78" y="31" width="9" height="8" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAICAYAAAArzdW1AAAAk0lEQVQYlV3QTQpBARTF8d9DPTERG2BuIEMpQwswsgU7sBSZ24SyBVMTU0OFF8pHuvXU6/3rTm7nnPuRvLM0xRxtrHFTooIEIYwKBmgWZTU8sSr0ejiURUE4h+hjiQm22OMU4/48cMl3ynDFq5jUxR0bnLFDB+NIjKQGZlighSO+GGEavXhBJNXz62JcGEMUVPH5AYM5HNnj0NbiAAAAAElFTkSuQmCC"/>
+  <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-3" d="M72,20.933A18.47,18.47,0,0,0,53.333,39.2,18.47,18.47,0,0,0,72,57.467a18.773,18.773,0,0,0,15.02-7.421A22.033,22.033,0,0,1,67.133,62.4a21.6,21.6,0,1,1,0-43.2,22.226,22.226,0,0,1,10.344,2.533A19.039,19.039,0,0,0,72,20.933Z"/>
+  <path id="Holes_copy_4" data-name="Holes copy 4" class="cls-4" d="M49.933,45.067a1.535,1.535,0,1,1-1.6,1.533A1.568,1.568,0,0,1,49.933,45.067Zm13.6,11.427A1.088,1.088,0,1,1,62.4,57.58,1.111,1.111,0,0,1,63.534,56.494Zm-6.876-2.437a0.439,0.439,0,1,1-.457.438A0.448,0.448,0,0,1,56.657,54.057ZM52.081,38.018a0.525,0.525,0,1,1-.547.524A0.536,0.536,0,0,1,52.081,38.018Zm-3.2-.533a0.525,0.525,0,1,1-.547.525A0.536,0.536,0,0,1,48.881,37.484Zm2.667-8.667a0.525,0.525,0,1,1-.547.524A0.536,0.536,0,0,1,51.547,28.818Z"/>
+</svg>

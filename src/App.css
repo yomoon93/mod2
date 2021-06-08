@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.box{
+    list-style: none;
+    border: brown 2px solid;
+    width:450px;
+    box-shadow: 20px 5px 5px rosybrown ;
+    position: relative;
+    left: 680px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#photo{
+    border: red 2px solid;
+   
+    height: 350px;
+    width: 450px;
+    position: relative;
+    left: 680px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header  header header"
+    "search search . photo"
+    "footer footer footer";
+    
+}
+#contain {
+    
+   padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#label{
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+input{
+    width:200px;
+    height:35px
+}
+#btn{
+    width:100px;
+    height:40px;
+    background-color:pink;
+    color:white;
+    font-weight:25px;
+    position: right;
+    
+}
+#btn:hover{
+    
+    background-color:blueviolet;
+    
+
+}
+#btnb {
+    
+    position: relative;
+    left: 250px;
+    width:100px;
+    height: 20px;
+    background-color: crimson;
+}
+#btnb:hover {
+    
+    position: relative;
+    
+    background-color: Pink;
+}
+.wContainer{
+    
+    height: 500px;
+    width:400px;
+    box-shadow: 10px 5px 5px rosybrown ;
+    list-style: none;
+    border: rosybrown 2px solid;
+    background-color: blueviolet;
+   
+}
+#listOne{
+    list-style: none;
+   
+}
+#weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btnS{
+   
+   
+    width:100px;
+    height: 20px;
+    background-color: crimson;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+#icon1 {
+    height:200px;
+    width:100px;
 }
 
-.App-link {
-  color: #61dafb;
+.weatherI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#aboutOne{
+    margin-top: 50px;
+
+}
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
+.contactH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
