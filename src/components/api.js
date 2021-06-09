@@ -26,7 +26,7 @@ import '../App.css'
                 fetch("https://zillow-com1.p.rapidapi.com/property_url="+ this.props.city, {
                     "method": "GET",
                     "headers": {
-                        "x-rapidapi-key": "397afdd1a1msh57cc8dbedc5788ap119f99jsn44718aac973d",
+                        "x-rapidapi-key": process.env.REACT_APP_KEY,
                         "x-rapidapi-host": "zillow-com1.p.rapidapi.com"
                     }
                 })
@@ -48,7 +48,7 @@ import '../App.css'
                 fetch("https://zillow-com1.p.rapidapi.com/images?zpid="+ zpid, {
                     "method": "GET",
                     "headers": {
-                        "x-rapidapi-key": "397afdd1a1msh57cc8dbedc5788ap119f99jsn44718aac973d",
+                        "x-rapidapi-key": process.env.REACT_APP_KEY,
                         "x-rapidapi-host": "zillow-com1.p.rapidapi.com"
                     }
                 })
@@ -106,7 +106,7 @@ import '../App.css'
         fetch("https://zillow-com1.p.rapidapi.com/propertyExtendedSearch?location="+ this.state.city +"&home_type=Houses", {
             "method": "GET",
             "headers": {
-                "x-rapidapi-key": "397afdd1a1msh57cc8dbedc5788ap119f99jsn44718aac973d",
+                "x-rapidapi-key": process.env.REACT_APP_KEY,
                 "x-rapidapi-host": "zillow-com1.p.rapidapi.com"
             }
         })

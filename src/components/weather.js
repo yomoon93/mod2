@@ -14,7 +14,7 @@ class Weather extends React.Component {
         fetch(`https://community-open-weather-map.p.rapidapi.com/forecast?q=${this.props.city},us`, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "397afdd1a1msh57cc8dbedc5788ap119f99jsn44718aac973d",
+            "x-rapidapi-key":process.env.REACT_APP_KEY,
             "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
         }
     })
