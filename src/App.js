@@ -20,7 +20,7 @@ const[save,setSave] =useState([])
 const [data, setData] = useState([])
 const [city,setCity] = useState('')
 const handleCity = (newCity) =>{
-    console.log('we made it here')
+    // console.log('we made it here')
     setCity(newCity)
   }
   console.log(city) 

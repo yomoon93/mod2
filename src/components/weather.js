@@ -1,4 +1,7 @@
 import React from 'react'
+import * as WiIcons from 'react-icons/wi'
+import Moment from "react-moment";
+import moment from "moment";
 
 class Weather extends React.Component {
     constructor(props){
@@ -43,6 +46,11 @@ render(){
             
         <div>
            <h1 id="weather">Weather</h1>
+           <div className='weather-box'>
+           
+           
+           
+         
           {this.state.data.map((dataSet,key)=>{
               const img = dataSet.weather[0].icon
               return(
@@ -50,24 +58,31 @@ render(){
                   <li id="listOne" key={key}>
                      
                         
-                          <h2>{location.toUpperCase()}</h2>
+                          <h2 className='location'>{location.toUpperCase()}</h2>
                           <br/>
                           <img className="iconI" src={"http://openweathermap.org/img/w/"+dataSet.weather[0].icon+'.png'} />
-                          <br/>
-                         <h2>Date:  {dataSet.dt_txt}</h2> 
+                         <p> Description:{dataSet.weather[0].description}</p> 
                          <br/>
-                        <h2> Temperture:{Math.round((dataSet.main.temp-273.15) * (9/5) + 32)}</h2>
+                    
+                            Date:
+                          <Moment format='LLLL'>
+                             {moment().format(dataSet.dt_txt)}
+                             
+                          </Moment>
+                        
+                         <br/>
+                        <p> Temperture:{Math.round((dataSet.main.temp-273.15) * (9/5) + 32)}&#8457; </p>
+                        
+                        
+                        <p>Humidity:{dataSet.main.humidity} <WiIcons.WiHumidity/></p>
                         <br/>
                         
-                        <h2>Humidity:{dataSet.main.humidity}</h2>
-                        <br/>
-                        <h2> Description:{dataSet.weather[0].description}</h2>
                 
                   </li>      
                   </div>
               )
           })}
-                        
+            </div>              
 </div>
             )      
             

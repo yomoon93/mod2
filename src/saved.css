@@ -1,18 +1,37 @@
 .Saved {
+    margin: 2rem;
     display: grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr ;
     grid-template-rows:1fr 1fr 1fr;
-    border:2px blue solid;
+    list-style: none;
     gap:50px 23px;
    
 }
 
+.info{
+    padding: 2px;
+}
+
+.savedBox{
+    margin: 2rem;
+}
+
+
+.btn-box{
+    display: flex;
+    flex-direction: row;
+   
+}
 .container {
-    border: 2px red solid;
+   margin: 2rem;
     box-shadow: 20px 5px 5px rosybrown;
 }
 
 #savedPhoto{
-    height:200px;
-    width:300px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 1rem;
+    height:10em;
+    width:15em;
 }
