@@ -11,7 +11,7 @@ function Saved(props) {
         return (
           <div className="container" key={key}>
             <li className="savedBox">
-              <div className="info" > Address: {data.address} </div>
+              <div className="info"> Address: {data.address} </div>
            
               <div className="info"> Price: {data.price} </div>
               
@@ -24,7 +24,10 @@ function Saved(props) {
               </div>
               <div className="btn-box">
               
-              
+             
+              <button id="btnb" onClick={(e) => props.handleImage(e, data.zpid)}>
+                Show Image
+              </button>
                
               </div>
              
@@ -46,3 +49,11 @@ function Saved(props) {
   );
 }
 export default Saved;
+
+
+// <button
+//                 id="btnS"
+//                 onClick={() => this.props.setSave([...this.props.save, data])}
+//               >
+//                 Save
+//               </button>
